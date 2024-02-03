@@ -3,18 +3,59 @@ body {
   padding: 0px;
   box-sizing: border-box;
   background-image: url(bg.jpeg);
+  color: whitesmoke;
 }
 header {
   display: flex;
+  height: 23vh;
 }
 .logo img {
   width: 35%;
   position: relative;
-  bottom: 11%;
+  bottom: 25%;
 }
 .topic img {
   width: 70%;
   margin-left: 70%;
   position: relative;
-  bottom: 13%;
+  bottom: 33%;
+}
+.container {
+  display: flex;
+  margin-left: 15vh;
+}
+.container button {
+  background-color: transparent;
+  color: whitesmoke;
+  border: 2px solid grey;
+  border-radius: 50px;
+  padding: 1px 15px;
+  width: 175px;
+}
+.container p {
+  font-size: 21px;
+  display: inline;
+  position: relative;
+  bottom: 20%;
+}
+button img {
+  width: 30%;
+}
+p {
+  /* font-family: "DEATHNOTE Font"; */
+  font-family: "Shadows Into Light", cursive;
+}
+.page {
+  /* border: 2px solid red; */
+  background-image: url(page.jpeg);
+  width: 320px;
+  height: 500px;
+  background-size: cover;
+  margin: 65px 65px 0px 65px;
+}
+.text {
+  /* border: 2px solid red; */
+  width: 286px;
+  height: 339px;
+  margin: 89px 15px;
 }

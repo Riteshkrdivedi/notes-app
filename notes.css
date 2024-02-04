@@ -5,6 +5,19 @@ body {
   background-image: url(bg.jpeg);
   color: whitesmoke;
 }
+body::-webkit-scrollbar {
+  width: 5px; /* Set the width of the scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #888; /* Set the color of the thumb (the draggable part) */
+  border-radius: 6px; /* Set the radius of the thumb */
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #f2f2f2; /* Set the color of the track (the non-draggable part) */
+  border-radius: 6px; /* Set the radius of the track */
+}
 header {
   display: flex;
   height: 23vh;
@@ -27,10 +40,15 @@ header {
 .container button {
   background-color: transparent;
   color: whitesmoke;
-  border: 2px solid grey;
+  border: 2px solid #858585;
   border-radius: 50px;
   padding: 1px 15px;
   width: 175px;
+  transition: all 0.5s ease;
+}
+.container button:hover {
+  background-color: #888;
+  border: 2px solid white;
 }
 .container p {
   font-size: 21px;
@@ -40,6 +58,8 @@ header {
 }
 button img {
   width: 30%;
+  position: relative;
+  top: 6px;
 }
 p {
   /* font-family: "DEATHNOTE Font"; */
@@ -48,14 +68,60 @@ p {
 .page {
   /* border: 2px solid red; */
   background-image: url(page.jpeg);
-  width: 320px;
-  height: 500px;
+  max-width: 320px;
+  max-height: 500px;
   background-size: cover;
   margin: 65px 65px 0px 65px;
+  display: inline-block;
 }
 .text {
   /* border: 2px solid red; */
-  width: 286px;
-  height: 339px;
-  margin: 89px 15px;
+  width: 250px;
+  min-height: 306px;
+  max-height: 306px;
+  margin: 85px 15px;
+  position: relative;
+  top: 0vh;
+  padding: 2vh;
+  display: inline-block;
+  outline: none;
+  overflow-y: auto;
+}
+p[contenteditable="true"]::-webkit-scrollbar {
+  width: 2px; /* Set the width of the scrollbar */
+}
+
+p[contenteditable="true"]::-webkit-scrollbar-thumb {
+  background-color: #888; /* Set the color of the thumb (the draggable part) */
+  border-radius: 6px; /* Set the radius of the thumb */
+}
+
+p[contenteditable="true"]::-webkit-scrollbar-track {
+  background-color: #f2f2f2; /* Set the color of the track (the non-draggable part) */
+  border-radius: 6px; /* Set the radius of the track */
+}
+.page img {
+  /* border: 2px solid red; */
+  width: 30px;
+  position: relative;
+  left: 32vh;
+  bottom: 48px;
+  transition: all 0.5s ease;
+}
+.page img:hover {
+  filter: drop-shadow(3px 3px 5px red);
+}
+@media screen and (max-width: 600px) {
+  .logo img {
+    width: 42%;
+    position: relative;
+    bottom: 18%;
+  }
+  .topic img {
+    width: 106%;
+    margin: 0px;
+    position: relative;
+    bottom: 30%;
+    right: 40%;
+  }
 }

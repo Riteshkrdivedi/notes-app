@@ -61,6 +61,11 @@ button img {
   position: relative;
   top: 6px;
 }
+.data-container {
+  /* border: 2px solid red; */
+  width: 98vw;
+  height: auto;
+}
 p {
   /* font-family: "DEATHNOTE Font"; */
   font-family: "Shadows Into Light", cursive;

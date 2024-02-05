@@ -1,14 +1,17 @@
+let datacontainer = document.querySelector(".data-container");
+
 function update() {
-  let text = document.querySelector(".text");
-  localStorage.setItem("notes", text);
+  // let text = document.querySelector(".text");
+  localStorage.setItem("notes", datacontainer.innerHTML);
   console.log(localStorage.getItem("notes"));
 }
 
 function shownotes() {
-  let text = document.querySelector(".text");
-  text.innerHTML = localStorage.getItem("1");
-  console.log("kuch ho bhi rha h");
+  // let text = document.querySelector(".text");
+  datacontainer.innerHTML = localStorage.getItem("notes");
+  console.log("shownotes h");
 }
+shownotes();
 
 function addpage() {
   let page = document.createElement("div");
@@ -21,7 +24,7 @@ function addpage() {
   page.className = "page";
   p.className = "text";
 
-  document.body.appendChild(page);
+  datacontainer.appendChild(page);
   page.appendChild(p);
   page.appendChild(img);
   console.log("success");

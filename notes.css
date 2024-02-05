@@ -129,4 +129,9 @@ p[contenteditable="true"]::-webkit-scrollbar-track {
     bottom: 30%;
     right: 40%;
   }
+  .data-container {
+    border: 2px solid rgba(255, 0, 0, 0);
+    width: 113vw;
+    height: auto;
+  }
 }

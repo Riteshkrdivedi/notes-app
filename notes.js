@@ -43,6 +43,7 @@ document.body.addEventListener("click", (e) => {
     // alert("if works");
     update();
   } else if (e.target.className === "text") {
+    update();
     console.log("if works");
     let notes = document.querySelectorAll(".text");
     notes.forEach((nt) => {
